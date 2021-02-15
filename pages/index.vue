@@ -60,6 +60,9 @@
           >
             Nuxt GitHub
           </a>
+          <br>
+          <nuxt-link to="/news">お知らせ</nuxt-link>
+          <nuxt-link to="/articles">記事</nuxt-link>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
