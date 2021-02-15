@@ -20,7 +20,7 @@
           <nuxt-link :to="'/articles/'+ article.slug" style="text-decoration: none">
             <v-card class="white lighten-2 ma-6" height="400" width="240">
               <!-- <v-card class="ma-6" :img="require('@/assets/images/sample_01.jpg')" height="300" width="360"> -->
-              <img v-bind:src="article.image" height="150" width="240" alt="">
+              <img v-bind:src='"/_nuxt/" + article.image' height="150" width="240" alt="">
               <v-card-title>
                 {{article.title}}
               </v-card-title>
