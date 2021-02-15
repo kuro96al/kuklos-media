@@ -13,7 +13,7 @@
           <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
           <nuxt-link to="/news">お知らせ</nuxt-link>
           <nuxt-link to="/articles">記事</nuxt-link>
-          <img src="~/assets/images/sample_03.jpg">
+          <!-- <img src="~/assets/images/sample_03.jpg"> -->
         </v-card-text>
         <!-- <v-card-actions>
           <v-spacer />
@@ -33,7 +33,8 @@
 export default {
   head() {
     return {
-      title: 'index'
+      title: 'Kuklos Media',
+      titleTemplate: ''
     }
   },
   components: {

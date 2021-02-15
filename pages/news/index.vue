@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="n in news" :key="n.slug">
-      <nuxt-link :to="'/news/'+ n.slug">{{n.title}} {{n.date}}</nuxt-link>
+      <nuxt-link :to="'/news/'+ n.slug">{{n.title}}</nuxt-link>
     </div>
   </div>
 </template>

@@ -1,22 +1,30 @@
 <template>
   <article>
-    <h1>{{articles.title}}</h1>
-    <dl>
-      <dt>date</dt>
-      <dd>{{articles.date}}</dd>
-    </dl>
-    <div><img :src="articles.image" /></div>
-    <div v-for="tag in articles.tags" :key="tag">{{tag}}</div>
+    <v-container>
+      <v-layout column justify-center align-center>
+        <h1>{{article.title}}</h1>
+        <dl>
+          <dd>{{article.date}}</dd>
+        </dl>
+        <div><img :src="article.image" /></div>
+        <div v-for="tag in article.tags" :key="tag">{{tag}}</div>
 
-    <nuxt-content :document="articles" />
+        <v-flex xs12 sma12 md12 style="width: 100%">
+          <div class="ma-4 markdown-body">
+            <nuxt-content :document="article" />
+          </div>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
   </article>
 </template>
 
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const articles = await $content('articles', params.slug || 'index').fetch()
-    return { articles }
+    const article = await $content('articles', params.slug || 'index').fetch()
+    return { article }
   }
 }
 </script>

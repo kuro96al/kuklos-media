@@ -1,12 +1,13 @@
 ---
 title: 'DeFiの仕組み'
-date: '2020-09-22T21:47:00.000-07:00'
+date: '2020年 9月 22日'
 tags:
   - 投資
   - 仮想通貨
   - 基礎
 keywords:
   - 暗号通貨
+image: /images/sample_02.jpg
 <!-- slug: /2020/09/cryptocurrency -->
 thumbnail: thumbnail/2020/08/knowledge.png
 point1: 暗号通貨は美味しいぞ
