@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="pa-3">
+    <v-card class="pa-3" flat>
       <v-carousel>
         <v-carousel-item v-for="(article, i) in articles" v-bind:src="article.slug" :key="i">
           <nuxt-link :to="'/articles/'+ article.slug" style="text-decoration: none">
@@ -14,11 +14,11 @@
         <p></p>
       </div>
     </v-card> -->
-    <v-card class="mt-3 mb-4 pa-16">
+    <v-card class="mt-6 mb-4" flat>
       <v-layout row wrap>
-        <v-flex xs4 v-for="article in this.articleLists" :key="article.slug">
+        <v-flex xs3 v-for="article in this.articleLists" :key="article.slug">
           <nuxt-link :to="'/articles/'+ article.slug" style="text-decoration: none">
-            <v-card class="white lighten-2 ma-6" height="400" width="240">
+            <v-card hover class="white lighten-2 ma-6" height="400" width="240">
               <!-- <v-card class="ma-6" :img="require('@/assets/images/sample_01.jpg')" height="300" width="360"> -->
               <img v-bind:src="article.image" height="150" width="240" alt="">
               <v-card-title>
@@ -30,7 +30,7 @@
               </v-card-subtitle>
               <v-divider class="mx-4"></v-divider>
               <v-card-text>
-                <v-chip-group active-class="deep-purple accent-4 white--text" column>
+                <v-chip-group active-class="accent-4 white--text" column>
                   <v-chip v-for="tag in article.tags" :key="tag" class="ma-2" color="#FEE2E9" text-color="#B34778" x-small>
                     <!-- <v-icon left>mdi-label</v-icon> -->
                     {{tag}}
@@ -61,7 +61,7 @@ export default {
       length: 0,
       lists: [],
       articleLists: [],
-      pageSize: 3
+      pageSize: 4
     }
   },
   async asyncData ({ $content, params }) {
