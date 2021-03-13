@@ -1,14 +1,5 @@
 <template>
   <v-container>
-    <v-card class="pa-3" flat>
-      <v-carousel>
-        <v-carousel-item v-for="(article, i) in articles" v-bind:src="article.slug" :key="i">
-          <nuxt-link :to="'/articles/'+ article.slug" style="text-decoration: none">
-            <img v-bind:src="article.image" height="100%" width="100%" alt="">
-          </nuxt-link>
-        </v-carousel-item>
-      </v-carousel>
-    </v-card>
     <!-- <v-card class="pa-3">
       <div>
         <p></p>
